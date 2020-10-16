@@ -108,7 +108,7 @@ namespace UbiQuity.Pages
             try
             {
                 string id = String.Format("//li[@id='{0}']/div[@class='field-value']/input", fieldName);
-                var field = _driver.FindElement(By.XPath(id));
+                var field = WaitForElementReturned(By.XPath(id));
 
                 string fieldval = field.GetAttribute("value");
 
